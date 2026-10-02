@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Chapter dates, meetings, and competition resources for Titan HOSA.">
+<title>Titan HOSA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14305c;--red:#c8202f;--cream:#fdfaf2;--line:#14305c;--soft:#dfe5f0;--muted:#5a6a86;--card:#fff;
+--head:"Bricolage Grotesque","Trebuchet MS",sans-serif;--body:"Source Sans 3","Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--cream);color:var(--navy);font:16px/1.5 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:30}
+header{position:sticky;top:0;z-index:10;background:var(--card);border-bottom:1px solid var(--soft);display:flex;align-items:center;gap:16px;padding:10px 20px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font:800 1.1rem var(--head);text-decoration:none;margin-right:auto}
+.brand img{height:34px;width:auto}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{text-decoration:none;padding:6px 12px;border-radius:99px;font-weight:600}
+nav a:hover{background:var(--soft)}
+main{max-width:1040px;margin:0 auto;padding:20px 20px 60px}
+.hero{background:var(--navy);color:#fff;border-radius:16px;padding:44px 32px;display:grid;gap:16px}
+.logos{display:flex;gap:14px;align-items:center}
+.logos img{height:60px;width:auto;border-radius:6px;background:#fff;padding:4px}
+h1{font:800 clamp(2.4rem,8vw,4.6rem)/1 var(--head);margin:0;letter-spacing:-.02em}
+h1 em{font-style:normal;color:#ff8a94}
+.school{margin:0;opacity:.85;font-size:1.1rem}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:11px 20px;border-radius:8px;font-weight:700;text-decoration:none;border:2px solid #fff;color:#fff}
+.btn.main{background:var(--red);border-color:var(--red)}
+.note{background:#e9eefc;border-left:5px solid var(--red);padding:16px 20px;border-radius:0 8px 8px 0;margin-top:18px}
+.note b{font-family:var(--head)}
+section{padding-top:44px}
+h2{font:800 1.9rem var(--head);margin:0 0 16px}
+.ev{display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--soft);border-radius:10px;padding:14px 18px;margin-bottom:10px}
+.date{min-width:62px;text-align:center;background:var(--navy);color:#fff;border-radius:8px;padding:6px 4px;font:800 1.7rem/1 var(--head)}
+.date small{display:block;font:600 .8rem var(--body);opacity:.85}
+.ev h3{margin:0;font:800 1.1rem var(--head)}
+.ev p{margin:2px 0 0;color:var(--muted)}
+.past{opacity:.7}
+.sub{font:700 1rem var(--head);color:var(--muted);margin:22px 0 8px}
+.intro{color:var(--muted);max-width:70ch}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 8px}
+input,select,textarea{font:inherit;color:var(--navy)}
+input[type=search]{flex:1;min-width:220px;padding:11px 14px;border:1px solid var(--soft);border-radius:8px;background:#fff}
+button{font:700 .95rem var(--body);cursor:pointer}
+.tb{padding:10px 16px;border:1px solid var(--soft);border-radius:8px;background:#fff;color:var(--navy)}
+.tb.red{background:var(--red);border-color:var(--red);color:#fff}
+.cat{border:1px solid var(--soft);border-radius:10px;margin-bottom:14px;overflow:hidden;background:#fff}
+.cat>summary{cursor:pointer;padding:14px 18px;display:flex;align-items:center;gap:14px;list-style:none;background:var(--bg)}
+.cat>summary::-webkit-details-marker{display:none}
+.cat>summary::after{content:"▾";margin-left:auto;color:var(--muted);transition:transform .2s}
+.cat[open]>summary::after{transform:rotate(180deg)}
+.badge{background:var(--bd);color:#fff;border-radius:7px;width:30px;height:30px;display:grid;place-items:center;font:800 .8rem var(--head)}
+.cat summary b{font:800 1.15rem var(--head);display:block;line-height:1.1}
+.cat summary small{color:var(--muted)}
+.tw{overflow-x:auto}
+.grid{display:grid;grid-template-columns:minmax(260px,1fr) 130px 140px 130px;gap:14px;padding:14px 18px;border-top:1px solid var(--line);align-items:start}
+.grid.h{background:#f6f8fc;color:var(--muted);font-size:.85rem;border-top:1px solid var(--soft);padding-top:8px;padding-bottom:8px}
+.grid b{font-family:var(--head);font-size:1.02rem}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 4px}
+.tag{font:700 .72rem var(--body);padding:2px 8px;border-radius:5px}
+.blue{background:#dde6ff;color:#2a4bb5}.grey{background:#e7ebf2;color:#3c4a60}.green{background:#d6f3e3;color:#17653f}.yellow{background:#fdefbd;color:#7a5200}
+.nt{margin:0;font-size:.85rem;color:var(--muted)}
+.chip{display:inline-block;font:700 .75rem var(--body);padding:2px 9px;border-radius:5px;background:#e7ebf2}
+.chip.Team{background:#dde6ff;color:#2a4bb5}.chip.Chapter{background:#fdefbd;color:#7a5200}
+.who{font-weight:700;font-size:.9rem}
+.gb{display:inline-block;padding:7px 12px;border:1px solid #b9c7ee;border-radius:7px;background:#eef2ff;color:#2a4bb5;font-weight:700;font-size:.85rem;text-decoration:none}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
+.res a{background:#fff;border:1px solid var(--soft);border-radius:10px;padding:16px;text-decoration:none}
+.res a:hover{border-color:var(--red)}
+.res b{font-family:var(--head);display:block}
+.fine{color:var(--muted);font-size:.9rem;margin-top:14px;background:#e9eefc;padding:14px 18px;border-radius:8px}
+footer{text-align:center;color:var(--muted);padding:30px 20px;border-top:1px solid var(--soft)}
+footer button{background:none;border:none;color:var(--muted);text-decoration:underline;margin-left:10px}
+dialog{border:1px solid var(--soft);border-radius:12px;padding:24px;max-width:340px;color:var(--navy)}
+dialog input{width:100%;padding:10px;border:1px solid var(--soft);border-radius:8px;margin:10px 0}
+dialog .err{color:var(--red);min-height:1.3em;margin:0}
+.bar{position:sticky;top:0;z-index:20;background:var(--red);color:#fff;padding:10px 20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.bar span{margin-right:auto;font-weight:700}
+.bar button{padding:8px 14px;border-radius:7px;border:2px solid #fff;background:#fff;color:var(--red)}
+.ed{background:#fff;border:2px dashed var(--red);border-radius:10px;padding:14px;margin:0 0 12px}
+.ed input,.ed select,.ed textarea{padding:8px;border:1px solid #b9c4da;border-radius:6px;background:#fff;max-width:100%}
+.ed textarea{width:100%;min-height:70px}
+.er{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.er label{font-size:.8rem;color:var(--muted);display:flex;flex-direction:column}
+.er .x{background:#fde8ea;color:#a1182a;border:1px solid #f3b9c0;border-radius:6px;padding:6px 10px;margin-left:auto}
+.evbox{border-top:1px solid var(--soft);padding-top:10px;margin-top:10px}
+.hint{font-size:.9rem;color:var(--muted)}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.grid.h{display:none}.hero{padding:30px 20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cat>summary::after{transition:none}}
+</style>
+</head>
+<body>
+<div class="bar" id="bar" hidden>
+  <span>Editing mode</span>
+  <button type="button" id="saveDraft">Save draft in this browser</button>
+  <button type="button" id="dl">Download data.js</button>
+  <button type="button" id="exit">Exit editing</button>
+</div>
+<a class="skip" href="#main-content">Skip to chapter information</a>
+<header>
+  <a class="brand" href="#top"><img src="branding/hosa.png" alt="" onerror="this.remove()">Titan HOSA 2026-2027</a>
+  <nav aria-label="Main"><a href="#meetings">Meetings</a><a href="#dates">Dates</a><a href="#competitions">Competitions</a><a href="#about">About</a></nav>
+</header>
+
+<main id="main-content">
+  <div class="hero" id="top">
+    <div class="logos">
+      <img src="branding/hosa.png" alt="HOSA – Future Health Professionals" onerror="this.remove()">
+      <img src="branding/jefferson.jpg" alt="PSJA Thomas Jefferson T-STEM Early College High School" onerror="this.remove()">
+    </div>
+    <h1>Stay connected. <em>Get HOSA ready.</em></h1>
+    <p class="school">PSJA Thomas Jefferson T-STEM Early College High School</p>
+    <div class="btns"><a class="btn main" href="#competitions">Explore competitions</a><a class="btn" href="#dates">Important dates</a></div>
+  </div>
+  <div class="note" id="update"></div>
+  <div id="staff"></div>
+
+  <section id="meetings"><h2>Next meetings</h2><div id="l-meetings"></div></section>
+  <section id="dates"><h2>Important dates</h2><div id="l-dates"></div><p class="sub" id="pastH">Past updates</p><div id="l-past"></div></section>
+
+  <section id="competitions">
+    <h2>Find your competition</h2>
+    <p class="intro">High school · 2026–2027. Online test labels refer to Texas Area testing. Upload labels show the round or submission process. Open each event's guidelines for full instructions.</p>
+    <div class="tools" id="tools">
+      <input type="search" id="q" placeholder="Search competitions or officers" aria-label="Search competitions or officers">
+      <button class="tb" id="exp" type="button">Expand categories</button>
+    </div>
+    <p class="hint" id="count" aria-live="polite"></p>
+    <div id="cats"></div>
+    <h3 class="sub">Helpful resources</h3>
+    <div class="res">
+      <a href="https://hosa.org/guidelines/"><b>HOSA competition guidelines</b>Find your event and read the current guidelines, required materials, and rating sheets.</a>
+      <a href="https://texashosa.org/competitive-events/"><b>Texas HOSA competitions</b>Check Texas competition information and state resources.</a>
+      <a href="https://hosa.org/"><b>About HOSA</b>Explore HOSA–Future Health Professionals.</a>
+    </div>
+    <p class="fine">Formats checked against the <a href="https://hosa.org/wp-content/uploads/2026/09/Event-Characteristics-26-27-9.10-Sheet1.pdf">2026–2027 HOSA event chart</a> and <a href="https://texashosa.org/texas-hosa-competition/">Texas HOSA guidelines</a>. Registration and eligibility/accommodation forms may still be required when event upload is marked No. Confirm deadlines with your advisor.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Titan HOSA 2026-2027</h2>
+    <p class="intro">Our HOSA chapter brings students together to explore healthcare, build leadership skills, prepare for competitions, and serve our community.</p>
+  </section>
+</main>
+
+<footer>Titan HOSA 2026-2027 · Student chapter information<button type="button" id="login">Teacher login</button></footer>
+
+<dialog id="dlg">
+  <form id="lf">
+    <b>Teacher login</b>
+    <input type="password" id="code" placeholder="Access code" autocomplete="off" aria-label="Access code">
+    <p class="err" id="err" role="alert"></p>
+    <button class="tb red" type="submit">Unlock editor</button>
+    <button class="tb" type="button" id="cancel">Cancel</button>
+  </form>
+</dialog>
+
+<script src="data.js"></script>
+<script>
+var S = JSON.parse(JSON.stringify(window.SITE)), editing = false, openAll = false;
+var CLR = [["#e4effc","#2f6fb5"],["#dff3f1","#1d8a85"],["#fde8ea","#b8405a"],["#efe7fa","#7a4bb5"],["#fdf1cf","#a8700a"],["#fde9df","#b5532a"],["#e2f4e9","#2a7a55"]];
+var TL = {Y:"Yes — Texas Area",N:"No",C:"Confirm with advisor",I:"In-person test"};
+var UL = {N:"No",AS:"Yes — Area & State",ILC:"Yes — ILC only",S:"Yes — State",T:"Online tracking",F:"Forms / special process",C:"Confirm with advisor"};
+var TEST_NOTE = "Required online test during the Texas Area testing window. Later-round testing follows the event guideline.";
+var UP_NOTE = "Upload by the Area deadline. If advancing, follow the State and ILC resubmission requirements.";
+var $ = function(id){return document.getElementById(id)};
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+
+/* ---------- viewing ---------- */
+function dateItem(x){return '<div class="ev"><div class="date">'+esc(x.day)+'<small>'+esc(x.mon)+'</small></div><div><h3>'+esc(x.title)+'</h3><p>'+esc(x.sub)+'</p></div></div>'}
+function fillList(id, arr, cls){$(id).innerHTML = arr.length ? arr.map(function(x){return cls?dateItem(x).replace('class="ev"','class="ev '+cls+'"'):dateItem(x)}).join("") : '<p class="hint">Nothing posted right now.</p>'}
+function tagCls(k,v){return k==="a" ? (v==="Y"||v==="I"?"blue":v==="C"?"yellow":"grey") : (v==="N"?"grey":v==="C"?"yellow":"green")}
+function noteOf(v){return v.note || (v.a==="Y"&&v.u==="N" ? TEST_NOTE : v.a==="N"&&v.u==="AS" ? UP_NOTE : "")}
+function row(v){
+  var link = v.pdf || "https://texashosa.org/competitive-events/";
+  return '<div class="grid"><div><b>'+esc(v.n)+'</b><div class="tags"><span class="tag '+tagCls("a",v.a)+'">Online test: '+esc(TL[v.a]||v.a)+'</span><span class="tag '+tagCls("u",v.u)+'">Online upload: '+esc(UL[v.u]||v.u)+'</span></div><p class="nt">'+esc(noteOf(v))+'</p></div>'+
+    '<div><span class="chip '+esc(v.t)+'">'+esc(v.t)+'</span><br><small>'+esc(v.s)+'</small></div><div class="who">'+(v.w?'Responsible: ':'')+esc(v.w)+'</div>'+
+    '<div><a class="gb" href="'+esc(link)+'">'+(v.pdf?'Guidelines PDF':'Find guidelines')+'</a></div></div>';
+}
+function renderCats(){
+  var term = $("q").value.trim().toLowerCase(), html = "", shown = 0, total = 0;
+  S.cats.forEach(function(c,i){
+    total += c.events.length;
+    var list = c.events.filter(function(v){return !term || (v.n+" "+v.w).toLowerCase().indexOf(term)>-1});
+    shown += list.length;
+    if(term && !list.length) return;
+    var k = CLR[i%CLR.length];
+    html += '<details class="cat" style="--bg:'+k[0]+';--bd:'+k[1]+'"'+((openAll||term)?' open':'')+'><summary><span class="badge">'+('0'+(i+1)).slice(-2)+'</span><span><b>'+esc(c.name)+'</b><small>'+c.events.length+' events</small></span></summary>'+
+      '<div class="tw"><div class="grid h"><span>Competition</span><span>Participation</span><span>Person responsible</span><span>Guidelines</span></div>'+list.map(row).join("")+'</div></details>';
+  });
+  $("cats").innerHTML = html || '<p class="hint">No competitions match your search.</p>';
+  $("count").textContent = shown+" of "+total+" events · High school only";
+}
+
+/* ---------- editing ---------- */
+function inp(p,val,label,w){return '<label>'+label+'<input data-p="'+p+'" value="'+esc(val)+'" style="width:'+(w||150)+'px"></label>'}
+function sel(p,val,label,opts){return '<label>'+label+'<select data-p="'+p+'">'+Object.keys(opts).map(function(k){return '<option value="'+k+'"'+(k===val?' selected':'')+'>'+esc(opts[k])+'</option>'}).join("")+'</select></label>'}
+function dateEd(key,title){
+  return '<div class="ed"><b>'+title+'</b>'+S[key].map(function(x,i){var p=key+"."+i;
+    return '<div class="er">'+inp(p+".day",x.day,"Day",60)+inp(p+".mon",x.mon,"Month",70)+inp(p+".title",x.title,"Title",220)+inp(p+".sub",x.sub,"Details",260)+'<button class="x" type="button" data-act="del" data-p="'+p+'">Delete</button></div>'}).join("")+
+    '<button class="tb" type="button" data-act="add" data-p="'+key+'">+ Add</button></div>';
+}
+function renderEditor(){
+  var h = '<div class="ed"><b>Chapter update</b><textarea data-p="update" aria-label="Chapter update">'+esc(S.update)+'</textarea></div>'+
+    dateEd("meetings","Next meetings")+dateEd("dates","Important dates")+dateEd("past","Past updates")+
+    '<div class="ed"><b>Access code</b><p class="hint">Leave blank to keep the current code. To change it, type a new one and then download data.js.</p><input id="nc" placeholder="New access code" autocomplete="off"></div>'+
+    '<p class="hint">Competitions are edited below. When you are done, click <b>Download data.js</b> at the top and upload it to GitHub to publish your changes.</p>';
+  $("staff").innerHTML = h;
+  var c = "";
+  S.cats.forEach(function(cat,i){
+    c += '<details class="cat" open style="--bg:'+CLR[i%7][0]+';--bd:'+CLR[i%7][1]+'"><summary><span class="badge">'+('0'+(i+1)).slice(-2)+'</span><span><b>'+esc(cat.name)+'</b><small>'+cat.events.length+' events</small></span></summary><div class="ed" style="margin:12px">'+
+      cat.events.map(function(v,j){var p="cats."+i+".events."+j;
+        return '<div class="evbox"><div class="er">'+inp(p+".n",v.n,"Competition",230)+inp(p+".w",v.w,"Person responsible",150)+sel(p+".t",v.t,"Type",{Individual:"Individual",Team:"Team",Chapter:"Chapter"})+inp(p+".s",v.s,"People",100)+'</div>'+
+          '<div class="er">'+sel(p+".a",v.a,"Online test",TL)+sel(p+".u",v.u,"Online upload",UL)+inp(p+".pdf",v.pdf,"Guidelines link",230)+'<button class="x" type="button" data-act="del" data-p="'+p+'">Delete</button></div>'+
+          '<div class="er">'+inp(p+".note",v.note,"Note (optional)",520)+'</div></div>'}).join("")+
+      '<button class="tb" type="button" data-act="add" data-p="cats.'+i+'.events">+ Add competition</button></div></details>';
+  });
+  $("cats").innerHTML = c;
+}
+function getPath(p){var o=S,k=p.split(".");for(var i=0;i<k.length-1;i++)o=o[k[i]];return [o,k[k.length-1]]}
+var NEW = {meetings:{day:"",mon:"",title:"",sub:""},dates:{day:"",mon:"",title:"",sub:""},past:{day:"",mon:"",title:"",sub:""},
+  events:{n:"New competition",w:"",t:"Individual",s:"1 person",a:"Y",u:"N",note:"",pdf:""}};
+document.addEventListener("input", function(ev){
+  var t = ev.target; if(!editing || !t.dataset || !t.dataset.p) return;
+  var r = getPath(t.dataset.p); r[0][r[1]] = t.value;
+});
+document.addEventListener("click", function(ev){
+  var t = ev.target.closest("[data-act]"); if(!editing || !t) return;
+  var p = t.dataset.p;
+  if(t.dataset.act==="add"){var arr=getPath(p+".x")[0]; arr.push(JSON.parse(JSON.stringify(NEW[p.split(".").pop()==="events"?"events":p])));}
+  if(t.dataset.act==="del"){var r=getPath(p); r[0].splice(+r[1],1);}
+  renderAll();
+});
+function renderAll(){
+  $("update").textContent = S.update;
+  if(editing){renderEditor();$("l-meetings").innerHTML=$("l-dates").innerHTML=$("l-past").innerHTML="";$("tools").hidden=true;$("count").hidden=true;$("pastH").hidden=true;}
+  else{$("staff").innerHTML="";fillList("l-meetings",S.meetings);fillList("l-dates",S.dates);fillList("l-past",S.past,"past");$("pastH").hidden=!S.past.length;$("tools").hidden=false;$("count").hidden=false;renderCats()}
+}
+function sha(s){return crypto.subtle.digest("SHA-256",new TextEncoder().encode(s)).then(function(b){return Array.from(new Uint8Array(b)).map(function(x){return ("0"+x.toString(16)).slice(-2)}).join("")})}
+
+$("q").addEventListener("input", renderCats);
+$("exp").addEventListener("click", function(){openAll=!openAll;$("exp").textContent=openAll?"Collapse categories":"Expand categories";renderCats()});
+$("login").addEventListener("click", function(){$("err").textContent="";$("code").value="";$("dlg").showModal()});
+$("cancel").addEventListener("click", function(){$("dlg").close()});
+$("lf").addEventListener("submit", function(ev){
+  ev.preventDefault();
+  if(!window.crypto||!crypto.subtle){$("err").textContent="Open the site over https to use the editor.";return}
+  sha($("code").value.trim()).then(function(h){
+    if(h!==window.SITE.codeHash){$("err").textContent="That code is not correct.";return}
+    $("dlg").close();
+    try{var d=localStorage.getItem("titan-hosa-draft"); if(d && confirm("Load the draft you saved earlier in this browser?")) S=JSON.parse(d)}catch(e){}
+    editing=true;$("bar").hidden=false;renderAll();window.scrollTo(0,0);
+  });
+});
+$("exit").addEventListener("click", function(){editing=false;$("bar").hidden=true;renderAll()});
+$("saveDraft").addEventListener("click", function(){try{localStorage.setItem("titan-hosa-draft",JSON.stringify(S));alert("Draft saved in this browser. It is not live for students until you download data.js and upload it to GitHub.")}catch(e){alert("This browser would not save the draft. Use Download data.js instead.")}});
+$("dl").addEventListener("click", function(){
+  var nc = $("nc") && $("nc").value.trim();
+  (nc ? sha(nc) : Promise.resolve(S.codeHash)).then(function(h){
+    S.codeHash = h;
+    var blob = new Blob(["window.SITE = "+JSON.stringify(S,null,1)+";\n"],{type:"text/javascript"});
+    var a = document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="data.js"; document.body.appendChild(a); a.click(); a.remove();
+  });
+});
+renderAll();
+</script>
+</body>
+</html>
